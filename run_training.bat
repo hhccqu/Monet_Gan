@@ -1,0 +1,19 @@
+@echo off
+echo 设置环境变量...
+
+REM 设置OpenMP环境变量以解决冲突问题
+set "KMP_DUPLICATE_LIB_OK=TRUE"
+
+REM 设置线程数量
+set "OMP_NUM_THREADS=20"
+set "TF_NUM_INTRAOP_THREADS=20"
+set "TF_NUM_INTEROP_THREADS=20"
+
+echo 环境变量已设置:
+echo KMP_DUPLICATE_LIB_OK=%KMP_DUPLICATE_LIB_OK%
+echo OMP_NUM_THREADS=%OMP_NUM_THREADS%
+echo TF_NUM_INTRAOP_THREADS=%TF_NUM_INTRAOP_THREADS%
+echo TF_NUM_INTEROP_THREADS=%TF_NUM_INTEROP_THREADS%
+
+echo 开始训练...
+python monet_gan.py 

@@ -1,0 +1,5 @@
+tensorflow>=2.4.0
+tensorflow-addons>=0.12.0
+numpy>=1.19.2
+matplotlib>=3.3.4
+glob2>=0.7 
